@@ -6,7 +6,7 @@ def readFile(fileName):
     return lines
 
 
-def assignToElves(calorieArray):
+def assignToElves(calorieArray: list):
     elves = []
     counter = 0
     for line in calorieArray:
@@ -21,6 +21,14 @@ def printArray(array):
     for line in array:
         print(line)
 
+def getTopThreeElves(elves: list):
+    tempElves = elves
+    topThree = 0
+    for i in range(3):
+        topThree += max(tempElves)
+        tempElves.remove(max(tempElves))
+    return topThree
+
 elves = assignToElves(readFile(ELVE_DATA))
-# printArray(elves)
 print(max(elves))
+print(getTopThreeElves(elves))
