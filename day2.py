@@ -1,5 +1,7 @@
+from util import readFile
+
 ROUND_DATA = "day2_input.txt"
-#this is honestly a really boring way to solve this, but it's really fast
+# this is honestly a really boring way to solve this, but it's really fast
 possibleMatchesPartOne = {
     'A X': 4,
     'A Y': 8,
@@ -24,20 +26,13 @@ possibleMatchesPartTwo = {
     'C Z': 7
 }
 
-def readFile(fileName):
-    file = open(fileName, "r")
-    lines = file.read().splitlines()
-    return lines
-
-def printArray(array):
-    for line in array:
-        print(line)
 
 def calculatePoints(matches: list, matchResults: dict):
     sumPoints = 0
     for match in matches:
         sumPoints += matchResults[match]
     return sumPoints
+
 
 rounds = readFile(ROUND_DATA)
 print(calculatePoints(rounds, possibleMatchesPartOne))
