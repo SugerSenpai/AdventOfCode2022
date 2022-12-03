@@ -1,9 +1,7 @@
-ELVE_DATA = "day1_input.txt"
+from util import readFile
 
-def readFile(fileName):
-    file = open(fileName, "r")
-    lines = file.read().splitlines()
-    return lines
+
+ELVE_DATA = "day1_input.txt"
 
 
 def assignToElves(calorieArray: list):
@@ -17,9 +15,6 @@ def assignToElves(calorieArray: list):
         counter = counter + int(line)
     return elves
 
-def printArray(array):
-    for line in array:
-        print(line)
 
 def getTopThreeElves(elves: list):
     tempElves = elves
@@ -28,6 +23,7 @@ def getTopThreeElves(elves: list):
         topThree += max(tempElves)
         tempElves.remove(max(tempElves))
     return topThree
+
 
 elves = assignToElves(readFile(ELVE_DATA))
 print(max(elves))
