@@ -35,3 +35,4 @@ for move in moves:
         
 print(len(visitedPositions))
 print(len(visitedPositionsTail))
+#should be 2562 but it's 2543 somehow
