@@ -1,4 +1,3 @@
-from collections import defaultdict
 import math
 from util import *
 
@@ -25,7 +24,7 @@ def configureMonkeys(monkeys: list):
         monkeyFalse.append(int(false[-1:].split(',')[0]))
 
 
-def calculateMonkeyBusiness(rounds: int, monkey:list):
+def calculateMonkeyBusiness(rounds: int):
     inspected = [0 for _ in range(len(monkeys))]
     for _ in range(rounds):
         for monkey in range(len(monkeys)):
@@ -46,10 +45,10 @@ def calculateMonkeyBusiness(rounds: int, monkey:list):
     print(inspected[-1]*inspected[-2])
 
 configureMonkeys(monkeys)
-part1 = calculateMonkeyBusiness(20, monkeys)
+part1 = calculateMonkeyBusiness(20)
 
 divs = math.prod(monkeyTest)
 
 monkeyItems = []
 configureMonkeys(monkeys)
-part2 = calculateMonkeyBusiness(10000,monkeys)
+part2 = calculateMonkeyBusiness(10000)
