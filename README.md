@@ -3,3 +3,5 @@ I try to solve everything by myself, but since I use AoC to learn more about Pyt
 <br>Here are the ressources I used when I was stuck:
 - Day 7 : https://www.youtube.com/watch?v=ZPM5xclRInk 
 - Day 12 : https://github.com/jonathanpaulson/AdventOfCode/blob/master/2022/12.py
+
+I will be stopping from day 13 onwards, since I frankly don't have much time due to private circumstances and uni projects
